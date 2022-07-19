@@ -5,9 +5,11 @@ const HomieSchema = new Schema({
     name: String,
     age: Number,
     location: String,
+    image: Array,
     description: String,
     occupation: String,
-    status: String
+    status: String,
+    gender: String
 });
 
 module.exports = mongoose.model('Homie', HomieSchema);
