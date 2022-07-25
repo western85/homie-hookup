@@ -1,26 +1,16 @@
-<!DOCTYPE html>
-<html lang="en">
+<% layout('layouts/boilerplate')%>
 
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Homird</title>
-    <link rel="stylesheet" href="/stylesheets/index.css">
-</head>
+    <body>
 
-<body>
-    <h1>All Homies</h1>
-    <a href="homies/new">Add a Homie</a>
-    <ul>
-        <% for (let homie of homies) { %>
-            <li>
-                <a href="/homies/<%= homie._id %>">
-                    <%= homie.name %>
-                </a>
-            </li>
-            <% } %>
-    </ul>
-</body>
-
-</html>
+        <h1>All Homies</h1>
+        <a href="homies/new">Add a Homie</a>
+        <ul>
+            <% for (let homie of homies) { %>
+                <li>
+                    <a href="/homies/<%= homie._id %>">
+                        <%= homie.name %>
+                    </a>
+                </li>
+                <% } %>
+        </ul>
+    </body>
